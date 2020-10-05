@@ -1,0 +1,27 @@
+<section id="services-wrap" class="services-wrap s-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 section-header mb-5">
+                <h2 class="font-weight-bold">Our Services</h2>
+                <p>Quicky provides the best on-demand delivery service in Lagos, NG for same-day ordering and delivery</p>
+
+            </div>
+
+            <div *ngFor="let service of services" data-aos="fade-up" class="service-wrap col-md-6 col-lg-3 col-sm-12">
+                <div class="card o-hidden mb-4">
+                    <div class="card-header p-0 text-center">
+
+                        <img class="img-responsive" src="{{service.asset}}">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title text-capitalize font-weight-bold">{{service.service}}</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet additional adipiscing elit Aenean commodo ligula</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

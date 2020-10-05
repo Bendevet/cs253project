@@ -1,0 +1,161 @@
+<div class="container-fluid light-gray">
+    <section class="row">
+        <section class=" col-xs-12 col-sm-12 col-md-8">
+            <div class="section-header center-item">
+                <h2 class="font-weight-bold">Place Request</h2>
+                <div>Make a request today and we will arrange for same day pickup and delivery of your parcels.</div>
+            </div><br><br>
+
+
+
+            <form class="row form" role="form">
+
+                <section class="col-xs-12 col-sm-12 col-md-6">
+
+                    <div class="form-group mb-4 col-6">
+                        <label for="name">
+                                        <i class="eva eva-person-outline"></i>
+                                    </label>
+                        <input type="text" name="Name" id="name" class="form-control" placeholder="Fullname" required>
+
+                    </div>
+                    <div class="form-group mb-4 col-6">
+                        <label for="phone">
+                                        <i class="eva eva-phone-call-outline"></i>
+                                    </label>
+                        <input type="text" required id="phone" name="phone" class="form-control" placeholder="Phone number" aria-describedby="helpId">
+
+                    </div>
+                    <div class="form-group mb-4 col-md-6">
+                        <label for="address">
+                                        <i class="eva eva-navigation-outline"></i>
+                                    </label>
+                        <input type="text" required name="address" id="address" class="form-control" placeholder="Email" aria-describedby="helpId">
+
+                    </div>
+
+                    <div class="form-group mb-4 col-md-6">
+                        <label for="destination">
+                                        <i class="eva eva-navigation-2-outline"></i>
+                                    </label>
+                        <input type="text" required name="destination" id="destination" class="form-control" placeholder="Pickup address" aria-describedby="helpId">
+
+                    </div>
+
+
+                    <div class="form-group mb-4 col-md-12">
+
+                        <label for="instruction">
+                                        <i class="eva eva-edit-outline"></i>
+                                    </label>
+                        <textarea class="form-control" placeholder="Pickup instructions" required name="instruction" id="instruction" rows="5"></textarea>
+
+
+                    </div>
+
+                </section>
+
+
+                <section class="col-xs-12 col-sm-12 col-md-6">
+
+                    <div class="form-group mb-4 col-md-6">
+                        <label for="name">
+                                        <i class="eva eva-person-outline"></i>
+                                    </label>
+                        <input type="text" name="Name" id="name" class="form-control" placeholder="Your Name" required>
+
+                    </div>
+                    <div class="form-group mb-4 col-md-6">
+                        <label for="phone">
+                                        <i class="eva eva-phone-call-outline"></i>
+                                    </label>
+                        <input type="text" required id="phone" name="phone" class="form-control" placeholder="Phone number" aria-describedby="helpId">
+
+                    </div>
+                    <div class="form-group mb-4 col-md-6">
+                        <label for="address">
+                                        <i class="eva eva-navigation-outline"></i>
+                                    </label>
+                        <input type="text" required name="address" id="address" class="form-control" placeholder="Email" aria-describedby="helpId">
+
+                    </div>
+
+                    <div class="form-group mb-4 col-md-6">
+                        <label for="destination">
+                                        <i class="eva eva-navigation-2-outline"></i>
+                                    </label>
+                        <input type="text" required name="destination" id="destination" class="form-control" placeholder="Delivery Address" aria-describedby="helpId">
+
+                    </div>
+
+
+                    <div class="form-group mb-4 col-md-12">
+
+                        <label for="instruction">
+                                        <i class="eva eva-edit-outline"></i>
+                                    </label>
+                        <textarea class="form-control" placeholder="Delivery instructions" required name="instruction" id="instruction" rows="5"></textarea>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <div class="form-group col-md-12">
+                    <button type="submit" class="btn btn-block half-button form-submit-button btn-large btn-warning" (click)="addToState()">Place order
+                                </button>
+
+                </div>
+            </form>
+
+
+
+
+
+
+            <!-- <section class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <form class="row form" role="form">
+                      
+
+
+                        <div class="form-group col-md-12">
+                            <button type="submit" class="btn btn-block half-button form-submit-button btn-large btn-warning" (click)="addToState()">Place order
+                                </button>
+
+                        </div>
+                    </form>
+                </section> -->
+
+
+
+
+        </section>
+
+
+
+        <section class="col-xs-12 col-sm-12 col-md-4">
+            <div data-aos="fade-left" class="align-items-center">
+                <div class="right-contact-wrap ml-5 mt-5 pt-5">
+                    <img src="../../../assets/images/shapdriver.png" class="img-responsive zoom-fade" alt="Image">
+                </div>
+            </div>
+        </section>
+    </section>
+</div>
+
+<div *ngif="success" class="alert alert-success alert-dismissible fade show" role="alert" [@animate]="{value:'*',params:{y:'-120px',opacity:'0',delay:'100ms', duration: '400ms'}}">
+    <button type="button" class="close">
+        (click)="success=false"
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <strong>Your order was placed succefully</strong>
+</div>
+
+
+<Section>
+    <div *ngFor="let order of orders | async">
+        {{order.fromName}}
+    </div>
+</Section>

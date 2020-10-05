@@ -1,0 +1,33 @@
+<div class="main-header header-fixed-default" id="home-header">
+    <nav class="navbar container w-100 navbar-expand-lg navbar-transparent bg-transparent">
+
+        <div class="logo">
+            <img src="assets/images/logo_white.png" alt="logo">
+        </div>
+
+        <div class="menu-toggle navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <div style="margin: auto"></div>
+
+            <div class="header-part-right">
+
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="scroll-to nav-link m-2" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item" *ngFor="let menu of menus">
+                        <a class="scroll-to nav-link m-2" href="{{menu.id}}">{{menu.feature}}</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</div>

@@ -1,0 +1,47 @@
+<section id="intro-wrap" class="intro-six-Wrap text-left text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 intro-six-LeftSection pb-5">
+                <h1 class="introTitle font-weight-bold text-white text-42 mb-3 t-shadow">Build Relationships That infulence Your Business
+                </h1>
+                <p class="introDescription text-20 mb-4">Meet Quicky Logistics, No. 1, Lagos based parcels delivery mogul</p>
+                <div class="mb-5 lead">
+                    <ul class="list-inline">
+                        <li class="mb-3"><i class="eva eva-checkmark-outline mr-2 text-warning"></i>Swift and efficient electric motocyles specifically designed for you
+                        </li>
+
+                        <li class="mb-3"><i class="eva eva-checkmark-outline mr-2 text-warning"></i> Super cheap and 24/7 available</li>
+                    </ul>
+                </div>
+                <div class="intro-six-Buttons">
+
+                    <div class="subscribe-input">
+                        <form [formGroup]="trackForm" class="form-inline">
+                            <div class="form-group">
+                                <input type="text" class="form-control dexam-input h-55" placeholder="Enter your tracking ID" formControlName="trackNumber">
+                            </div>
+                            <button type="submit" class="btn btn-warning h-55 text-19" [disabled]="!trackForm.valid" (click)="trackOrder()">
+                                Track Order
+                            </button>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 intro-six-RightSection d-flex align-items-center">
+
+                <div class="intro-six-ProductImage">
+
+                    <img src="../../../assets/images/bikelogo.png" class="img-responsive" alt="img-intro">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay">
+
+    </div>
+
+</section>

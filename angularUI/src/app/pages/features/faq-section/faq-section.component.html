@@ -1,0 +1,69 @@
+<section class="faqs-wrap p-t-b-80" id="faqs-wrap">
+    <div class="container">
+        <div class="row">
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-12 mb-4 mb-lg-0 mb-md-0 mb-4">
+                <div class="section-header mb-5">
+                    <h2 class="font-weight-bold">Faqs</h2>
+                    <p>Quicky is a brand new on-demand, last-mile bike delivery service focusing on large West African cities. It currently operates in Lagos, Nigeria, and is looking to expand to other cities in the country and elsewhere in the near future.</p>
+
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="card ul-card__border-radius" *ngFor="let faq of faqs">
+                        <div class="card-header">
+                            <h6 class="card-title mb-0">
+                                <a data-toggle="collapse" class="collapsed text-default" href="#accordion-item-group{{faq.id}}">{{faq.question}}</a>
+                            </h6>
+                        </div>
+
+                        <div id="accordion-item-group{{faq.id}}" class="collapse" data-parent="#accordionExample">
+                            <div class="card-body">
+                                {{faq.answer}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of col -->
+            <div data-aos="fade-left" class="col-md-5 offset-md-1 col-sm-12 d-flex align-items-center">
+
+                <img src="http://demos.ui-lib.com/dexam-angular-html/assets/images/landing/svg/faqs2.svg" class="img-responsive w-100" alt="">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+<!-- <section id="testimonials-wrap" class="testimonial-wrap p-t-b-80 light-gray">
+    <div class="container">
+        <div class="row">
+            <div class="section-header col-md-12 mb-5">
+                <h2 class="font-weight-bold">What our customers says</h2>
+                <p>Hypercharge your business by leveraging the tools, the tech, and the customer base that brings an entire city to your door</p>
+            </div>
+            <div data-aos="fade-up" class="col-md-6 col-lg-4 col-sm-12 mb-4 single-testimonial-wrap" *ngFor="let item of testimonies">
+                <div class="card p-3">
+
+                    <div class="card-body">
+
+                        <p class="mb-4"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                        <div class="test-user-details text-left abs">
+                            <div class="user-img w-20 float-left mr-1">
+                            </div>
+                            <span class="user-name font-weight-bold mt-1 w-75 float-right">{{item.name}}</span>
+                            <span class="user-designation w-75 float-right">{{item.rank}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->

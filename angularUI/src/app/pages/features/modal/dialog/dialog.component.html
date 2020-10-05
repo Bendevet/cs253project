@@ -1,0 +1,105 @@
+<section class="row">
+    <div class="col-xs-1 col-md-3"></div>
+    <div class="col-xs-1 col-md-12">
+        <section class="modal-section" *ngIf="!isLoading">
+            <section class="top">
+                <div class="header">#{{item.orders.ordersNumber}}</div><br>
+                <div>Order Details</div><br>
+                <section class="quicky-grid-row">
+                    <div class="left-key">
+                        Status
+                    </div>
+                    <div class="left-value">
+                        #{{item.orders.orderStatus}}
+                    </div>
+                </section>
+
+                <section class="quicky-grid-row">
+                    <div class="left-key">
+                        Payment Type
+                    </div>
+                    <div class="left-value" *ngIf="item.orders.instantPayment">
+                        Instant
+                    </div>
+                    <div class="left-value" *ngIf="!item.orders.instantPayment">
+                        On Pickup
+                    </div>
+                </section>
+
+                <section class="quicky-grid-row">
+                    <div class="left-key">
+                        Payment Status
+                    </div>
+                    <div class="left-value" *ngIf="item.orders.status">
+                        Paid
+                    </div>
+                    <div class="left-value" *ngIf="!item.orders.status">
+                        Pending
+                    </div>
+                </section>
+
+                <section class="quicky-grid-row">
+                    <div class="left-key">
+                        Amount
+                    </div>
+                    <div class="left-value">
+                        N{{item.orders.amount}}
+                    </div>
+                </section>
+
+            </section>
+            <div class="quicky-divider"></div>
+
+            <section class="bottom">
+                <div class="address-name">#Pickup Address</div>
+
+                <section class="address-container from">
+                    <div>Name {{item.orders.fromName}}</div>
+                    <div class="divider"></div>
+                    <div> <span>AD </span> Address {{item.orders.fromAddress}}</div>
+                    <div class="divider"></div>
+                    <div>Phone {{item.orders.toPhone}}</div>
+                </section><br><br>
+                <div class="address-name">#Delivery Address</div>
+
+                <section class="address-container to">
+                    <div>Name: {{item.orders.toName}}</div>
+                    <div class="divider"></div>
+                    <div> <span>AD </span> Address {{item.orders.fromAddress}}</div>
+                    <div class="divider"></div>
+                    <div>Phone {{item.orders.fromPhone}}</div>
+                </section><br><br>
+
+                <section class="driver-container" *ngIf="item.orders.driver!=null">
+                    <section class="profile">
+                        <img src="https://i.dailymail.co.uk/i/pix/2017/08/30/22/43B8835700000578-4837198-image-a-102_1504129715456.jpg" alt="no-image" class="avatar">
+
+                    </section>
+
+                    <section class="info">
+                        <div class="m-bottom">Name {{item.orders.driver?.fullname}}</div>
+                        <!-- <div class="m-bottom" *ngIf="item.orders!=null">
+                            <app-star [star]="{{item.orders.driver.rating}}"></app-star>
+                        </div>
+                        <div class="m-bottom" *ngIf="item.orders==null">
+                            <app-star [star]="0"></app-star>
+                        </div> -->
+                        <div class="m-bottom">
+                            <app-star [star]="4"></app-star>
+                        </div>
+                        <div>{{item.orders?.driver.phone}} <span>  Icon</span></div>
+                    </section>
+
+                </section>
+
+            </section>
+
+        </section>
+        <section *ngIf="isLoading" class="loader-center">
+            <div class="loader spinner-bubble spinner-bubble-primary loader-center">
+            </div>
+        </section>
+
+    </div>
+    <div class="col-xs-1 col-md-3"></div>
+</section>

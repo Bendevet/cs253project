@@ -1,0 +1,42 @@
+<section id="features-wrap" class="features_wrap p-t-b-80 f-bg">
+    <Section>
+        <div *ngFor="let order of orders | async">
+            {{order.name}}
+        </div>
+    </Section>
+    <div class="container">
+        <div class="row">
+
+
+            <div class="col-md-12 section-header mb-5">
+                <h2 class="font-weight-bold">Quicky Features</h2>
+                <p>Quicky uses advanced technology to give you more visibility and more flexibility for your shipments</p>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-6 col-sm-12 mb-4 mb-lg-0">
+                <div class="row">
+
+                    <div *ngFor="let feature of features" data-aos="fade-up" class="col-md-6 col-lg-4 col-sm-6 mb-4">
+                        <div class="card card-bg">
+
+                            <div class="card-body pt-4 pb-4 text-center">
+                                <i class="eva {{feature.icon}} text-30"></i>
+                                <h4 class="card-title pt-2 text-16">{{feature.feature}}</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- end of col-6 -->
+            <div data-aos="fade-left" class="col-md-6 col-lg-5 col-sm-12 offset-lg-1 d-flex align-items-center">
+
+                <img src="../../../assets/images/products15.svg" class="img-responsive w-100" alt="">
+
+            </div>
+
+        </div>
+    </div>
+</section>
